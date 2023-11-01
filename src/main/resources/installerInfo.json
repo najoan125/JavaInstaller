@@ -1,0 +1,43 @@
+{
+  "Name": "testInstaller",
+  "Version": "1.0.0",
+  "Installer": {
+    "Title": "$[Name] v$[Version]",
+    "BrandingText": "brandingText",
+    "Lang": {
+      "OSNotSupported": "This OS is not supported!",
+      "Next": "Next >",
+      "Previous": "Back",
+      "Cancel": "Cancel"
+    },
+    "InstallDir": {
+      "Windows": "$APPDATA/.testClient",
+      "Mac": "none",
+      "Linux": "/home/test"
+    }
+  },
+  "WelcomePage": {
+    "Title": "title",
+    "Content": "content"
+  },
+  "LicensePage": {
+    "Text": "header",
+    "SubText": "subHeader",
+    "LicenseFile": "license.txt",
+    "AgreeCheckbox": true
+  },
+  "DirectoryPage": {
+    "Text": "header",
+    "SubText": "subHeader",
+    "Content": "content",
+    "Browse": "Browse..."
+  },
+  "InstallPage": {
+    "Text": "Header",
+    "SubText": "subHeader",
+    "Installed": "Installed: %s",
+    "Removed": "Remove: %s",
+    "Downloaded": "Downloaded: %s",
+    "Extracted": "Extracted: %s"
+  }
+}
