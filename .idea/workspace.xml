@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="implement WelcomePage">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add branding text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1698802189148" duration="8008000" />
       <workItem from="1698881495778" duration="2650000" />
       <workItem from="1698893308926" duration="2586000" />
-      <workItem from="1698903189719" duration="7335000" />
+      <workItem from="1698903189719" duration="8173000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -164,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698908879258</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add branding text">
+      <option name="closed" value="true" />
+      <created>1698910739138</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698910739138</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +194,7 @@
     <MESSAGE value="Add Page Classes" />
     <MESSAGE value="Add setLayout() in Page.java" />
     <MESSAGE value="implement WelcomePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement WelcomePage" />
+    <MESSAGE value="Add branding text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add branding text" />
   </component>
 </project>

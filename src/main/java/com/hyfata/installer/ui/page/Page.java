@@ -33,7 +33,6 @@ public abstract class Page {
 
         int i = 0;
         for (JPanel p : panels) {
-            p.setLayout(subLayout);
             p.setPreferredSize(new Dimension(UIController.WIDTH, height));
             if (addedHeights.containsKey(i)){
                 p.setPreferredSize(new Dimension(UIController.WIDTH,height+addedHeights.get(i)));

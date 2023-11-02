@@ -4,6 +4,7 @@ import com.hyfata.installer.ui.UIController;
 import com.hyfata.installer.utils.InfoUtil;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class WelcomePage extends Page {
     @Override
@@ -14,7 +15,7 @@ public class WelcomePage extends Page {
     }
 
     void content() {
-        JPanel panel = new JPanel();
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         String content = "<html>" +
                 "<h1>" + InfoUtil.getWelcomePage().getString("Title") + "</h1>" +
                 InfoUtil.getWelcomePage().getString("Content") +

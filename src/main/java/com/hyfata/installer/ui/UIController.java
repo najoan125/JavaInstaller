@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class UIController extends JFrame {
-    public static final int WIDTH = 520, HEIGHT = 320;
+    public static final int WIDTH = 520, HEIGHT = 340;
     public UIController() {
         init(InfoUtil.getInstallerTitle().replace("$[Name]",InfoUtil.getName()).replace("$[Version]",InfoUtil.getVersion()));
         start();
