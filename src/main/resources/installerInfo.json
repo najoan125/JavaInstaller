@@ -4,7 +4,7 @@
   "Installer": {
     "Title": "$[Name] v$[Version]",
     "Icon": "none",
-    "BrandingText": "brandingText",
+    "BrandingText": "Hyfata Install System",
     "Lang": {
       "OSNotSupported": "This OS is not supported!",
       "Next": "Next >",
@@ -19,7 +19,7 @@
   },
   "WelcomePage": {
     "Title": "title",
-    "Content": "content"
+    "Content": "content<br>HTML!!!"
   },
   "LicensePage": {
     "Text": "header",
