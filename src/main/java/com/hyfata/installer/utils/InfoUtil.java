@@ -12,7 +12,7 @@ public class InfoUtil {
         try {
             info = JsonReader.readFromInputStream(Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResourceAsStream("installerInfo.json")));
         } catch (JsonEmptyException | NullPointerException e) {
-            OptionPaneUtil.showErrorDialog("Error during load 'installerInfo.json'.\nPlease contact to developer!","Error during load");
+            DialogUtil.showErrorDialog("Can't found 'installerInfo.json'.\nPlease contact to developer!","Error during load");
             System.exit(-1);
         }
     }
@@ -29,6 +29,9 @@ public class InfoUtil {
     }
     public static String getInstallerTitle() {
         return getInstallerObject().getString("Title");
+    }
+    public static String getInstallerIcon() {
+        return getInstallerObject().getString("Icon");
     }
     public static String getInstallerBrandingText() {
         return getInstallerObject().getString("BrandingText");
@@ -75,13 +78,13 @@ public class InfoUtil {
     }
 
     public static JSONObject getWelcomePage() {
-        return info.getJSONObject("WelcomePage");
+        return info.optJSONObject("WelcomePage", null);
     }
     public static JSONObject getLicensePage() {
-        return info.getJSONObject("LicensePage");
+        return info.optJSONObject("LicensePage", null);
     }
     public static JSONObject getDirectoryPage() {
-        return info.getJSONObject("DirectoryPage");
+        return info.optJSONObject("DirectoryPage", null);
     }
     public static JSONObject getInstallPage() {
         return info.getJSONObject("InstallPage");

@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/JavaInstaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/OptionPaneUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/arc_theme_dark.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/theme/arc_theme_dark.theme.json" afterDir="false" />
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add Page Classes">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/DirectoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/JavaInstaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/JavaInstaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/OptionPaneUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/DialogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +48,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2XYNj5d6Pjedbsa2pGkBIS0S1OO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -71,6 +68,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/najoan/intellij-projects/JavaInstaller/src/main/resources/theme",
@@ -87,7 +85,20 @@
       <recent name="$PROJECT_DIR$/src/main/resources/theme" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="애플리케이션.JavaInstaller">
+    <configuration name="JavaInstaller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hyfata.installer.JavaInstaller" />
+      <module name="JavaInstaller.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hyfata.installer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaInstaller [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -112,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.JavaInstaller" />
         <item itemvalue="Gradle.JavaInstaller [shadowJar]" />
       </list>
     </recent_temporary>
@@ -124,11 +136,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698802188229</updated>
-      <workItem from="1698802189148" duration="7817000" />
+      <workItem from="1698802189148" duration="8008000" />
+      <workItem from="1698881495778" duration="2650000" />
+      <workItem from="1698893308926" duration="2315000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1698810079902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698810079903</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Add Page Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Page Classes" />
   </component>
 </project>

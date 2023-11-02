@@ -3,6 +3,7 @@
   "Version": "1.0.0",
   "Installer": {
     "Title": "$[Name] v$[Version]",
+    "Icon": "none",
     "BrandingText": "brandingText",
     "Lang": {
       "OSNotSupported": "This OS is not supported!",
