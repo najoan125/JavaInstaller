@@ -7,11 +7,12 @@ import com.hyfata.installer.utils.DialogUtil;
 import com.sun.jna.Platform;
 
 public class JavaInstaller {
+    public static UIController uiController;
     public static void main(String[] args) {
         IntelliJTheme.setup(ClassLoader.getSystemClassLoader().getResourceAsStream("theme/arc_theme_dark.theme.json"));
         InfoUtil.loadInfo();
         platformCheck();
-        new UIController();
+        uiController = new UIController();
     }
 
     private static void platformCheck() {

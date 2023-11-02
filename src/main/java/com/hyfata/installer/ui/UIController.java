@@ -1,16 +1,17 @@
 package com.hyfata.installer.ui;
 
+import com.hyfata.installer.ui.page.Page;
+import com.hyfata.installer.ui.page.WelcomePage;
 import com.hyfata.installer.utils.InfoUtil;
-import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class UIController extends JFrame {
-    public static final int WIDTH = 600, HEIGHT = 420;
+    public static final int WIDTH = 520, HEIGHT = 320;
     public UIController() {
         init(InfoUtil.getInstallerTitle().replace("$[Name]",InfoUtil.getName()).replace("$[Version]",InfoUtil.getVersion()));
-        design();
+        start();
         setVisible(true);
     }
 
@@ -30,17 +31,9 @@ public class UIController extends JFrame {
         setResizable(false);
     }
 
-    public static JPanel getScrollablePanel(Component view) {
-        JScrollPane scrollPane = new JScrollPane(view);
-        JPanel scrollablePanel = new JPanel(new BorderLayout());
-        scrollablePanel.add(scrollPane, BorderLayout.CENTER);
-        return scrollablePanel;
-    }
-
-    private void design() {
-        JSONObject welcomePage = InfoUtil.getWelcomePage();
-        JSONObject licensePage = InfoUtil.getLicensePage();
-        JSONObject directoryPage = InfoUtil.getDirectoryPage();
-        JSONObject installPage = InfoUtil.getInstallPage();
+    private void start() {
+        Page welcome = new WelcomePage();
+        add(welcome.getPanel());
+        getRootPane().setDefaultButton(Page.next);
     }
 }
