@@ -11,8 +11,9 @@ public abstract class Page {
     private final ArrayList<JPanel> panels = new ArrayList<>();
     private final HashMap<Integer,Integer> addedHeights = new HashMap<>(); //index, height
     private int height = 35;
+    private LayoutManager layoutManager = new FlowLayout(FlowLayout.CENTER);
     public JPanel getPanel(){
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel panel = new JPanel(layoutManager);
         initPanels();
 
         int i = 0;
@@ -30,6 +31,9 @@ public abstract class Page {
     }
     protected void registerPanel(JPanel panel) {
         panels.add(panel);
+    }
+    protected void setLayout(LayoutManager layout) {
+        layoutManager = layout;
     }
     protected void setHeight(int height) {
         this.height = height;

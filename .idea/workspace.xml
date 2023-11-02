@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add Page Classes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/DirectoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/JavaInstaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/JavaInstaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/OptionPaneUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/DialogUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +127,7 @@
       <updated>1698802188229</updated>
       <workItem from="1698802189148" duration="8008000" />
       <workItem from="1698881495778" duration="2650000" />
-      <workItem from="1698893308926" duration="2315000" />
+      <workItem from="1698893308926" duration="2513000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -148,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698810079903</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Page Classes">
+      <option name="closed" value="true" />
+      <created>1698895649538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698895649538</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
