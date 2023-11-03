@@ -73,6 +73,7 @@ public class UIController extends JFrame {
         getContentPane().remove(0);
         currentPageIndex++;
         getContentPane().add(pages.get(currentPageIndex).getPanel());
+        getRootPane().setDefaultButton(Page.next);
         revalidate();
         repaint();
     }
@@ -81,6 +82,7 @@ public class UIController extends JFrame {
         getContentPane().remove(0);
         currentPageIndex--;
         getContentPane().add(pages.get(currentPageIndex).getPanel());
+        getRootPane().setDefaultButton(Page.next);
         revalidate();
         repaint();
     }

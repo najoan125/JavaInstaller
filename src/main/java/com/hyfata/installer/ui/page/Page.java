@@ -4,6 +4,7 @@ import com.hyfata.installer.ui.UIController;
 import com.hyfata.installer.utils.InfoUtil;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,10 +16,6 @@ public abstract class Page {
 
     //height
     private final HashMap<Integer,Integer> addedHeights = new HashMap<>(); //index, height
-    private int height = 35;
-
-    //layout
-    private LayoutManager layoutManager = new FlowLayout(FlowLayout.LEFT);
 
     //buttons
     public static JButton back = new JButton(InfoUtil.getLangPrevious());
@@ -27,29 +24,38 @@ public abstract class Page {
 
     abstract void initPanels();
     public JPanel getPanel(){
-        JPanel panel = new JPanel(layoutManager);
         initPanels();
+        JPanel panel = new JPanel(new BorderLayout());
 
         int i = 0;
         for (JPanel p : panels) {
-            p.setPreferredSize(new Dimension(UIController.WIDTH, height));
             if (addedHeights.containsKey(i)){
-                p.setPreferredSize(new Dimension(UIController.WIDTH,height+addedHeights.get(i)));
+                p.setPreferredSize(new Dimension(UIController.WIDTH,p.getPreferredSize().height+addedHeights.get(i)));
+            } else {
+                p.setPreferredSize(new Dimension(UIController.WIDTH, p.getPreferredSize().height));
             }
             panel.add(p);
 
             i++;
         }
-        JPanel navi = new JPanel();
+
+        panel.add(getNaviPanel(), BorderLayout.SOUTH);
+        return panel;
+    }
+
+    private JPanel getNaviPanel() {
+        JPanel navi = new JPanel(new BorderLayout());
+
+        //branding
         JLabel branding = new JLabel(InfoUtil.getInstallerBrandingText());
         branding.setEnabled(false);
+        navi.add(branding, BorderLayout.WEST);
 
-        naviButtons.setLayout(new FlowLayout(FlowLayout.RIGHT));
-        naviButtons.setPreferredSize(new Dimension(UIController.WIDTH-branding.getPreferredSize().width-30, 35));
-        navi.add(branding);
-        navi.add(naviButtons);
-        panel.add(navi);
-        return panel;
+        //back,next,cancel button
+        navi.add(naviButtons, BorderLayout.EAST);
+
+        navi.setBorder(new EmptyBorder(0, 15, 15, 15));
+        return navi;
     }
 
     //register
@@ -60,15 +66,7 @@ public abstract class Page {
         naviButtons = panel;
     }
 
-    //layout
-    protected void setLayout(LayoutManager layout) {
-        layoutManager = layout;
-    }
-
     //height
-    protected void setHeight(int height) {
-        this.height = height;
-    }
     protected void addHeight(int height) {
         addedHeights.put(panels.size()-1, height);
     }

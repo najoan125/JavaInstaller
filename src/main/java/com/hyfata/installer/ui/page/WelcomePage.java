@@ -1,6 +1,5 @@
 package com.hyfata.installer.ui.page;
 
-import com.hyfata.installer.ui.UIController;
 import com.hyfata.installer.utils.InfoUtil;
 
 import javax.swing.*;
@@ -9,7 +8,6 @@ import java.awt.*;
 public class WelcomePage extends Page {
     @Override
     void initPanels() {
-        setHeight(UIController.HEIGHT-100);
         content();
         buttons();
     }
