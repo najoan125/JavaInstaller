@@ -18,7 +18,7 @@ public class WelcomePage extends Page {
                 "<h1>" + InfoUtil.parse(InfoUtil.getWelcomePage().getString("Title")) + "</h1>" +
                 InfoUtil.parse(InfoUtil.getWelcomePage().getString("Content")) +
                 "</html>";
-        panel.add(Box.createHorizontalStrut(5));
+        panel.add(Box.createHorizontalStrut(20));
         panel.add(new JLabel(content));
         registerPanel(panel);
     }

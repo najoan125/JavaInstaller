@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Clean code, little implement LicensePage.java">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Change some variable names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,7 @@
       <workItem from="1698881495778" duration="2650000" />
       <workItem from="1698893308926" duration="2586000" />
       <workItem from="1698903189719" duration="8233000" />
-      <workItem from="1698973937299" duration="8289000" />
+      <workItem from="1698973937299" duration="8887000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -203,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698982141938</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Change some variable names">
+      <option name="closed" value="true" />
+      <created>1698982284958</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698982284958</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +239,7 @@
     <MESSAGE value="Implement next, back, cancel / and now support $[] other json value" />
     <MESSAGE value="Change installerInfo.json" />
     <MESSAGE value="Clean code, little implement LicensePage.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean code, little implement LicensePage.java" />
+    <MESSAGE value="Change some variable names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change some variable names" />
   </component>
 </project>
