@@ -25,7 +25,10 @@
   "LicensePage": {
     "Text": "header",
     "SubText": "subHeader",
+    "Content": "Please scroll down to see the rest.",
     "LicenseFile": "license.txt",
+    "Agree": "I agree",
+    "AgreeButton": "Agree",
     "AgreeCheckbox": true
   },
   "DirectoryPage": {
