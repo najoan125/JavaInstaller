@@ -25,7 +25,7 @@ public abstract class Page {
     abstract void initPanels();
     public JPanel getPanel(){
         initPanels();
-        JPanel panel = new JPanel(new BorderLayout());
+        JPanel result = new JPanel(new BorderLayout());
 
         int i = 0;
         for (JPanel p : panels) {
@@ -34,28 +34,28 @@ public abstract class Page {
             } else {
                 p.setPreferredSize(new Dimension(UIController.WIDTH, p.getPreferredSize().height));
             }
-            panel.add(p);
+            result.add(p);
 
             i++;
         }
 
-        panel.add(getNaviPanel(), BorderLayout.SOUTH);
-        return panel;
+        result.add(getNaviPanel(), BorderLayout.SOUTH);
+        return result;
     }
 
     private JPanel getNaviPanel() {
-        JPanel navi = new JPanel(new BorderLayout());
+        JPanel result = new JPanel(new BorderLayout());
 
         //branding
         JLabel branding = new JLabel(InfoUtil.getInstallerBrandingText());
         branding.setEnabled(false);
-        navi.add(branding, BorderLayout.WEST);
+        result.add(branding, BorderLayout.WEST);
 
         //back,next,cancel button
-        navi.add(naviButtons, BorderLayout.EAST);
+        result.add(naviButtons, BorderLayout.EAST);
 
-        navi.setBorder(new EmptyBorder(0, 15, 15, 15));
-        return navi;
+        result.setBorder(new EmptyBorder(0, 15, 15, 15));
+        return result;
     }
 
     //register
