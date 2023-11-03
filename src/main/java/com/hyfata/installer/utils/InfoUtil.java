@@ -16,6 +16,9 @@ public class InfoUtil {
             System.exit(-1);
         }
     }
+    public static String parse(String str) {
+        return str.replace("$[Name]",InfoUtil.getName()).replace("$[Version]",InfoUtil.getVersion());
+    }
     public static String getName() {
         return info.getString("Name");
     }
@@ -28,13 +31,13 @@ public class InfoUtil {
         return info.getJSONObject("Installer");
     }
     public static String getInstallerTitle() {
-        return getInstallerObject().getString("Title");
+        return parse(getInstallerObject().getString("Title"));
     }
     public static String getInstallerIcon() {
         return getInstallerObject().getString("Icon");
     }
     public static String getInstallerBrandingText() {
-        return getInstallerObject().getString("BrandingText");
+        return parse(getInstallerObject().getString("BrandingText"));
     }
 
     // Installer.Lang object
@@ -42,7 +45,7 @@ public class InfoUtil {
         return getInstallerObject().getJSONObject("Lang");
     }
     public static String getLangOSNotSupport() {
-        return getLangObject().getString("OSNotSupported");
+        return parse(getLangObject().getString("OSNotSupported"));
     }
     public static String getLangNext() {
         return getLangObject().getString("Next");
@@ -53,19 +56,22 @@ public class InfoUtil {
     public static String getLangCancel() {
         return getLangObject().getString("Cancel");
     }
+    public static String getLangCancelAlert() {
+        return parse(getLangObject().getString("CancelAlert"));
+    }
 
     // Installer.InstallDir Object
     public static JSONObject getInstallDirObject() {
         return getInstallerObject().getJSONObject("InstallDir");
     }
     public static String getInstallDirWindows() {
-        return getInstallDirObject().getString("Windows");
+        return parse(getInstallDirObject().getString("Windows"));
     }
     public static String getInstallDirMac() {
-        return getInstallDirObject().getString("Mac");
+        return parse(getInstallDirObject().getString("Mac"));
     }
     public static String getInstallDirLinux() {
-        return getInstallDirObject().getString("Linux");
+        return parse(getInstallDirObject().getString("Linux"));
     }
     public static boolean isWindowsSupported() {
         return !getInstallDirWindows().equals("none");

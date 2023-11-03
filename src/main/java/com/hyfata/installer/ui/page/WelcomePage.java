@@ -17,8 +17,8 @@ public class WelcomePage extends Page {
     void content() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         String content = "<html>" +
-                "<h1>" + InfoUtil.getWelcomePage().getString("Title") + "</h1>" +
-                InfoUtil.getWelcomePage().getString("Content") +
+                "<h1>" + InfoUtil.parse(InfoUtil.getWelcomePage().getString("Title")) + "</h1>" +
+                InfoUtil.parse(InfoUtil.getWelcomePage().getString("Content")) +
                 "</html>";
         panel.add(Box.createHorizontalStrut(5));
         panel.add(new JLabel(content));

@@ -19,7 +19,6 @@ public abstract class Page {
 
     //layout
     private LayoutManager layoutManager = new FlowLayout(FlowLayout.LEFT);
-    private LayoutManager subLayout = new FlowLayout(FlowLayout.LEFT);
 
     //buttons
     public static JButton back = new JButton(InfoUtil.getLangPrevious());
@@ -64,9 +63,6 @@ public abstract class Page {
     //layout
     protected void setLayout(LayoutManager layout) {
         layoutManager = layout;
-    }
-    protected void setLayoutEachPanels(LayoutManager layout) {
-        subLayout = layout;
     }
 
     //height

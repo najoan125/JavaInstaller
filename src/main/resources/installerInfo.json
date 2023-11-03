@@ -9,7 +9,8 @@
       "OSNotSupported": "This OS is not supported!",
       "Next": "Next >",
       "Previous": "Back",
-      "Cancel": "Cancel"
+      "Cancel": "Cancel",
+      "CancelAlert": "Are you sure you want to quit the installation $[Name] v$[Version]?"
     },
     "InstallDir": {
       "Windows": "$APPDATA/.testClient",
@@ -18,7 +19,7 @@
     }
   },
   "WelcomePage": {
-    "Title": "title",
+    "Title": "Install $[Name] v$[Version]!!",
     "Content": "content<br>HTML!!!"
   },
   "LicensePage": {
