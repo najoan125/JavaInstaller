@@ -29,19 +29,22 @@ public abstract class Page {
 
     //getPanel
     public JPanel getPanel() {
-        initPanels();
+        if (panels.isEmpty())
+            initPanels();
         JPanel result = new JPanel(new BorderLayout());
 
         int i = 0;
+        JPanel in = new JPanel();
         for (JPanel p : panels) {
             if (addedHeights.containsKey(i)) {
                 p.setPreferredSize(new Dimension(UIController.WIDTH, p.getPreferredSize().height + addedHeights.get(i)));
             } else {
                 p.setPreferredSize(new Dimension(UIController.WIDTH, p.getPreferredSize().height));
             }
-            result.add(p);
+            in.add(p);
             i++;
         }
+        result.add(in);
 
         result.add(getNaviPanel(), BorderLayout.SOUTH);
         return result;

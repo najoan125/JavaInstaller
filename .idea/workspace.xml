@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Change window size again.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/FinishPage.java" afterDir="false" />
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Bug fix and edit LicensePage.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/WelcomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/InfoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +131,8 @@
       <workItem from="1698893308926" duration="2586000" />
       <workItem from="1698903189719" duration="8233000" />
       <workItem from="1698973937299" duration="9483000" />
-      <workItem from="1699239781447" duration="3199000" />
+      <workItem from="1699239781447" duration="3457000" />
+      <workItem from="1699253736948" duration="2991000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -234,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698983286382</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="NaviButtonPanel changed, Add FinishPage">
+      <option name="closed" value="true" />
+      <created>1699243091034</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699243091034</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +268,8 @@
     <MESSAGE value="Change some variable names" />
     <MESSAGE value="Change window size and some ui." />
     <MESSAGE value="Change window size again." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change window size again." />
+    <MESSAGE value="NaviButtonPanel changed, Add FinishPage" />
+    <MESSAGE value="Bug fix and edit LicensePage.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix and edit LicensePage.java" />
   </component>
 </project>
