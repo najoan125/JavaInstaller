@@ -14,6 +14,15 @@ public class UIController extends JFrame {
     public static final int WIDTH = 660, HEIGHT = 400;
     private final ArrayList<Page> pages = new ArrayList<>();
     private int currentPageIndex = 0;
+    public int getCurrentPageIndex() {
+        return currentPageIndex;
+    }
+    public Page getPage(int index) {
+        if (index+1 > pages.size()) {
+            return null;
+        }
+        return pages.get(index);
+    }
 
     public UIController() {
         init(InfoUtil.getInstallerTitle());
@@ -55,6 +64,9 @@ public class UIController extends JFrame {
             pages.add(new DirectoryPage());
         }
         pages.add(new InstallPage());
+        if (InfoUtil.getFinishPage() != null) {
+            pages.add(new FinishPage());
+        }
     }
 
     private void addListeners() {
@@ -71,11 +83,15 @@ public class UIController extends JFrame {
 
     private void next() {
         getContentPane().remove(0);
-        currentPageIndex++;
-        getContentPane().add(pages.get(currentPageIndex).getPanel());
-        getRootPane().setDefaultButton(Page.next);
-        revalidate();
-        repaint();
+        if (currentPageIndex + 1 < pages.size()) {
+            currentPageIndex++;
+            getContentPane().add(pages.get(currentPageIndex).getPanel());
+            getRootPane().setDefaultButton(Page.next);
+            revalidate();
+            repaint();
+        } else {
+            System.exit(1);
+        }
     }
 
     private void back() {

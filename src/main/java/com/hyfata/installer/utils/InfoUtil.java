@@ -50,6 +50,12 @@ public class InfoUtil {
     public static String getLangNext() {
         return getLangObject().getString("Next");
     }
+    public static String getLangInstall() {
+        return getLangObject().getString("Install");
+    }
+    public static String getLangFinish() {
+        return getLangObject().getString("Finish");
+    }
     public static String getLangPrevious() {
         return getLangObject().getString("Previous");
     }
@@ -94,5 +100,8 @@ public class InfoUtil {
     }
     public static JSONObject getInstallPage() {
         return info.getJSONObject("InstallPage");
+    }
+    public static JSONObject getFinishPage() {
+        return info.getJSONObject("FinishPage");
     }
 }

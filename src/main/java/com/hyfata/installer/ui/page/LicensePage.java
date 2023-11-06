@@ -9,7 +9,6 @@ public class LicensePage extends Page {
     @Override
     void initPanels() {
         header();
-        buttons();
     }
 
     void header() {
@@ -17,14 +16,5 @@ public class LicensePage extends Page {
         panel.add(new JLabel("<html><b>" + InfoUtil.parse(InfoUtil.getLicensePage().getString("Text")) + "</b><br></html>"));
         panel.add(new JLabel(InfoUtil.parse(InfoUtil.getLicensePage().getString("SubText"))));
         registerPanel(panel);
-    }
-
-    void buttons() {
-        JPanel panel = new JPanel();
-        panel.add(back);
-        panel.add(next);
-        panel.add(Box.createHorizontalStrut(5));
-        panel.add(cancel);
-        registerNaviButtonPanel(panel);
     }
 }

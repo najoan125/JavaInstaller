@@ -9,7 +9,6 @@ public class WelcomePage extends Page {
     @Override
     void initPanels() {
         content();
-        buttons();
     }
 
     void content() {
@@ -21,13 +20,5 @@ public class WelcomePage extends Page {
         panel.add(Box.createHorizontalStrut(20));
         panel.add(new JLabel(content));
         registerPanel(panel);
-    }
-
-    void buttons() {
-        JPanel panel = new JPanel();
-        panel.add(next);
-        panel.add(Box.createHorizontalStrut(5));
-        panel.add(cancel);
-        registerNaviButtonPanel(panel);
     }
 }

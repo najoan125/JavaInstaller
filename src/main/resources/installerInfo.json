@@ -8,6 +8,8 @@
     "Lang": {
       "OSNotSupported": "This OS is not supported!",
       "Next": "Next >",
+      "Install": "Install",
+      "Finish": "Finish",
       "Previous": "Back",
       "Cancel": "Cancel",
       "CancelAlert": "Are you sure you want to quit the installation $[Name] v$[Version]?"
@@ -44,5 +46,9 @@
     "Removed": "Remove: %s",
     "Downloaded": "Downloaded: %s",
     "Extracted": "Extracted: %s"
+  },
+  "FinishPage": {
+    "Title": "Installation Finished!",
+    "Content": "Content"
   }
 }
