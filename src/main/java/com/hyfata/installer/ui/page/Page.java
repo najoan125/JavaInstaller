@@ -29,8 +29,9 @@ public abstract class Page {
 
     //getPanel
     public JPanel getPanel() {
-        if (panels.isEmpty())
-            initPanels();
+        panels.clear();
+        addedHeights.clear();
+        initPanels();
         JPanel result = new JPanel(new BorderLayout());
 
         int i = 0;
