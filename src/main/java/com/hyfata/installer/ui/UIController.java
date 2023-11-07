@@ -11,7 +11,7 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class UIController extends JFrame {
-    public static final int WIDTH = 660, HEIGHT = 400;
+    public static final int WIDTH = 660, HEIGHT = 420;
     private final ArrayList<Page> pages = new ArrayList<>();
     private int currentPageIndex = 0;
     public int getCurrentPageIndex() {

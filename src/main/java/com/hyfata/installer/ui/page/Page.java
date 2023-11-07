@@ -22,7 +22,6 @@ public abstract class Page {
     public static JButton back = new JButton(InfoUtil.getLangPrevious());
     public static JButton next = new JButton(InfoUtil.getLangNext());
     public static JButton cancel = new JButton(InfoUtil.getLangCancel());
-    private boolean nextEnabled = true;
 
     //interface
     abstract void initPanels();
@@ -59,18 +58,14 @@ public abstract class Page {
         result.add(branding, BorderLayout.WEST);
 
         //back,next,cancel button
-        registerNaviButtonPanel();
+        initNaviPanel();
         result.add(naviButtons, BorderLayout.EAST);
 
         result.setBorder(new EmptyBorder(0, 15, 15, 15));
         return result;
     }
 
-    //button
-    protected void setNextEnabled(boolean enabled) {
-        nextEnabled = enabled;
-    }
-    protected void setAllEnabled(boolean enabled) {
+    protected void setNaviButtonAllEnabled(boolean enabled) {
         next.setEnabled(enabled);
         back.setEnabled(enabled);
         cancel.setEnabled(enabled);
@@ -80,7 +75,7 @@ public abstract class Page {
     protected void registerPanel(JPanel panel) {
         panels.add(panel);
     }
-    private void registerNaviButtonPanel() {
+    private void initNaviPanel() {
         JPanel panel = new JPanel();
         if (JavaInstaller.uiController != null) {
             int currentIndex = JavaInstaller.uiController.getCurrentPageIndex();
@@ -93,14 +88,15 @@ public abstract class Page {
             else if (JavaInstaller.uiController.getPage(currentIndex) instanceof InstallPage) {
                 if (JavaInstaller.uiController.getPage(currentIndex + 1) == null) {
                     next.setText(InfoUtil.getLangFinish());
+                    cancel.setEnabled(false);
                 } else {
                     next.setText(InfoUtil.getLangNext());
                 }
-                //setAllEnabled(false);
             }
             //currentPage == FinishPage
             else if (JavaInstaller.uiController.getPage(currentIndex) instanceof FinishPage) {
                 next.setText(InfoUtil.getLangFinish());
+                cancel.setEnabled(false);
             } else {
                 next.setText(InfoUtil.getLangNext());
             }
@@ -109,13 +105,10 @@ public abstract class Page {
                 panel.add(back);
             }
         }
-        if (!nextEnabled) {
-            next.setEnabled(false);
-        }
         panel.add(next);
         panel.add(Box.createHorizontalStrut(5));
         panel.add(cancel);
-        naviButtons = panel;
+        this.naviButtons = panel;
     }
 
     //height

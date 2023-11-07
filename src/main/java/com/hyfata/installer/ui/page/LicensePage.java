@@ -1,5 +1,7 @@
 package com.hyfata.installer.ui.page;
 
+import com.hyfata.installer.ui.UIController;
+import com.hyfata.installer.utils.HorizontalLine;
 import com.hyfata.installer.utils.InfoUtil;
 
 import javax.swing.*;
@@ -10,7 +12,8 @@ public class LicensePage extends Page {
     @Override
     void initPanels() {
         header();
-        addHeight(30);
+        line();
+        addHeight(10);
         content();
     }
 
@@ -19,7 +22,15 @@ public class LicensePage extends Page {
         panel.add(new JLabel("<html><b>" + InfoUtil.parse(InfoUtil.getLicensePage().getString("Text")) + "</b>" +
                 "<p>" + InfoUtil.parse(InfoUtil.getLicensePage().getString("SubText")) + "</p>" +
                 "</html>"));
-        panel.setBorder(new EmptyBorder(10, 10, 0, 0));
+        panel.setBorder(new EmptyBorder(0, 10, 0, 0));
+        registerPanel(panel);
+    }
+
+    void line() {
+        JPanel panel = new JPanel();
+        HorizontalLine horizontalLine = new HorizontalLine();
+        horizontalLine.setPreferredSize(new Dimension(UIController.WIDTH, 2));
+        panel.add(horizontalLine);
         registerPanel(panel);
     }
 
