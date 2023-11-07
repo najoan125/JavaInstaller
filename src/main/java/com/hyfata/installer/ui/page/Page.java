@@ -26,7 +26,7 @@ public abstract class Page {
     //interface
     abstract void initPanels();
 
-    //getPanel
+    //Panel methods
     public JPanel getPanel() {
         panels.clear();
         addedHeights.clear();
@@ -64,17 +64,6 @@ public abstract class Page {
         result.setBorder(new EmptyBorder(0, 15, 15, 15));
         return result;
     }
-
-    protected void setNaviButtonAllEnabled(boolean enabled) {
-        next.setEnabled(enabled);
-        back.setEnabled(enabled);
-        cancel.setEnabled(enabled);
-    }
-
-    //register
-    protected void registerPanel(JPanel panel) {
-        panels.add(panel);
-    }
     private void initNaviPanel() {
         JPanel panel = new JPanel();
         if (JavaInstaller.uiController != null) {
@@ -109,6 +98,17 @@ public abstract class Page {
         panel.add(Box.createHorizontalStrut(5));
         panel.add(cancel);
         this.naviButtons = panel;
+    }
+
+    protected void setNaviButtonAllEnabled(boolean enabled) {
+        next.setEnabled(enabled);
+        back.setEnabled(enabled);
+        cancel.setEnabled(enabled);
+    }
+
+    //register
+    protected void registerPanel(JPanel panel) {
+        panels.add(panel);
     }
 
     //height
