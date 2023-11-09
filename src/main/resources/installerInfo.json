@@ -25,8 +25,8 @@
     "Content": "content<br>HTML!!!"
   },
   "LicensePage": {
-    "Text": "header",
-    "SubText": "subHeader",
+    "Text": "License",
+    "SubText": "Please read license!",
     "Content": "Please scroll down to see the rest.",
     "LicenseFile": "license.txt",
     "Agree": "I agree",

@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="move up initNaviPanel()">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/HorizontalLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/HorizontalLine.java" afterDir="false" />
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Cleaned">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/utils/ScrollPaneUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/license.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +138,9 @@
       <workItem from="1699239781447" duration="3457000" />
       <workItem from="1699253736948" duration="3308000" />
       <workItem from="1699328428846" duration="1103000" />
-      <workItem from="1699337381480" duration="2645000" />
+      <workItem from="1699337381480" duration="2949000" />
+      <workItem from="1699405665445" duration="10259000" />
+      <workItem from="1699487250765" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -270,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699339781643</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Cleaned">
+      <option name="closed" value="true" />
+      <created>1699340040288</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699340040288</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,6 +321,7 @@
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Add HorizontalLine.java and Add horizontalLine in LicensePage, Clean code" />
     <MESSAGE value="move up initNaviPanel()" />
-    <option name="LAST_COMMIT_MESSAGE" value="move up initNaviPanel()" />
+    <MESSAGE value="Cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned" />
   </component>
 </project>

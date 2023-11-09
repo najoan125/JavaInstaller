@@ -14,6 +14,11 @@ public class UIController extends JFrame {
     public static final int WIDTH = 660, HEIGHT = 420;
     private final ArrayList<Page> pages = new ArrayList<>();
     private int currentPageIndex = 0;
+    private static int currentHeight = 0;
+
+    public static int getCurrentHeight() {
+        return currentHeight;
+    }
     public int getCurrentPageIndex() {
         return currentPageIndex;
     }
@@ -26,8 +31,11 @@ public class UIController extends JFrame {
 
     public UIController() {
         init(InfoUtil.getInstallerTitle());
-        start();
         setVisible(true);
+        currentHeight = getContentPane().getSize().height;
+        start();
+        revalidate();
+        repaint();
     }
 
     private void init(String title) {

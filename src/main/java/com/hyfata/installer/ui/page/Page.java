@@ -17,11 +17,13 @@ public abstract class Page {
 
     //height
     private final HashMap<Integer, Integer> addedHeights = new HashMap<>(); //index, height
+    private int allHeights = 0;
 
     //buttons
     public static JButton back = new JButton(InfoUtil.getLangPrevious());
     public static JButton next = new JButton(InfoUtil.getLangNext());
     public static JButton cancel = new JButton(InfoUtil.getLangCancel());
+    private boolean nextChanged = false;
 
     //interface
     abstract void initPanels();
@@ -30,9 +32,15 @@ public abstract class Page {
     public JPanel getPanel() {
         panels.clear();
         addedHeights.clear();
+        allHeights = 0;
         initPanels();
-        JPanel result = new JPanel(new BorderLayout());
 
+        JPanel result = new JPanel(new BorderLayout());
+        result.add(createContentPanel());
+        result.add(getNaviPanel(), BorderLayout.SOUTH);
+        return result;
+    }
+    private JPanel createContentPanel() {
         int i = 0;
         JPanel in = new JPanel();
         for (JPanel p : panels) {
@@ -44,10 +52,7 @@ public abstract class Page {
             in.add(p);
             i++;
         }
-        result.add(in);
-
-        result.add(getNaviPanel(), BorderLayout.SOUTH);
-        return result;
+        return in;
     }
     private JPanel getNaviPanel() {
         JPanel result = new JPanel(new BorderLayout());
@@ -86,8 +91,9 @@ public abstract class Page {
             else if (JavaInstaller.uiController.getPage(currentIndex) instanceof FinishPage) {
                 next.setText(InfoUtil.getLangFinish());
                 cancel.setEnabled(false);
-            } else {
+            } else if (!nextChanged) {
                 next.setText(InfoUtil.getLangNext());
+                next.setEnabled(true);
             }
             //currentPage != FirstPage
             if (currentIndex != 0 && JavaInstaller.uiController.getPage(currentIndex + 1) != null) {
@@ -100,10 +106,23 @@ public abstract class Page {
         this.naviButtons = panel;
     }
 
+    //utils
     protected void setNaviButtonAllEnabled(boolean enabled) {
         next.setEnabled(enabled);
         back.setEnabled(enabled);
         cancel.setEnabled(enabled);
+    }
+    protected int getRemainingHeight() {
+        int height = 0;
+        for (JPanel p : panels) {
+            height += p.getPreferredSize().height + 5;
+        }
+        height += getNaviPanel().getPreferredSize().height;
+        height += allHeights;
+        return UIController.getCurrentHeight() - height;
+    }
+    protected void setNextChanged(boolean changed) {
+        nextChanged = changed;
     }
 
     //register
@@ -113,6 +132,7 @@ public abstract class Page {
 
     //height
     protected void addHeight(int height) {
+        allHeights += height;
         addedHeights.put(panels.size() - 1, height);
     }
 }
