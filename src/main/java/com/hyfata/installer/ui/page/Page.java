@@ -40,6 +40,7 @@ public abstract class Page {
         result.add(getNaviPanel(), BorderLayout.SOUTH);
         return result;
     }
+
     private JPanel createContentPanel() {
         int i = 0;
         JPanel in = new JPanel();
@@ -54,6 +55,7 @@ public abstract class Page {
         }
         return in;
     }
+
     private JPanel getNaviPanel() {
         JPanel result = new JPanel(new BorderLayout());
 
@@ -69,6 +71,7 @@ public abstract class Page {
         result.setBorder(new EmptyBorder(0, 15, 15, 15));
         return result;
     }
+
     private void initNaviPanel() {
         JPanel panel = new JPanel();
         if (JavaInstaller.uiController != null) {
@@ -112,6 +115,7 @@ public abstract class Page {
         back.setEnabled(enabled);
         cancel.setEnabled(enabled);
     }
+
     protected int getRemainingHeight() {
         int height = 0;
         for (JPanel p : panels) {
@@ -121,8 +125,31 @@ public abstract class Page {
         height += allHeights;
         return UIController.getCurrentHeight() - height;
     }
+
     protected void setNextChanged(boolean changed) {
         nextChanged = changed;
+    }
+
+    protected String getNextString() {
+        int currentIndex = JavaInstaller.uiController.getCurrentPageIndex();
+
+        //nextPage == InstallPage
+        if (JavaInstaller.uiController.getPage(currentIndex + 1) instanceof InstallPage) {
+            return InfoUtil.getLangInstall();
+        }
+        //currentPage == InstallPage
+        else if (JavaInstaller.uiController.getPage(currentIndex) instanceof InstallPage) {
+            if (JavaInstaller.uiController.getPage(currentIndex + 1) == null) {
+                return InfoUtil.getLangFinish();
+            } else {
+                return InfoUtil.getLangNext();
+            }
+        }
+        //currentPage == FinishPage
+        else if (JavaInstaller.uiController.getPage(currentIndex) instanceof FinishPage) {
+            return InfoUtil.getLangFinish();
+        }
+        return InfoUtil.getLangNext();
     }
 
     //register

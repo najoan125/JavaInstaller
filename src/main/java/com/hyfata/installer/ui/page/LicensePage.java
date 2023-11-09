@@ -61,10 +61,10 @@ public class LicensePage extends Page {
         if (!checkbox) {
             next.setText(InfoUtil.getLicensePage().getString("AgreeButton"));
         } else if (!read) {
-            next.setText(InfoUtil.getLangNext());
+            next.setText(getNextString());
             next.setEnabled(false);
         } else {
-            next.setText(InfoUtil.getLangNext());
+            next.setText(getNextString());
         }
         setNextChanged(true);
 
