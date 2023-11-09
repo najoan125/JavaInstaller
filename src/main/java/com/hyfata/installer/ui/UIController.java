@@ -12,17 +12,17 @@ import java.util.ArrayList;
 
 public class UIController extends JFrame {
     public static final int WIDTH = 660, HEIGHT = 420;
-    private final ArrayList<Page> pages = new ArrayList<>();
-    private int currentPageIndex = 0;
+    private static final ArrayList<Page> pages = new ArrayList<>();
+    private static int currentPageIndex = 0;
     private static int currentHeight = 0;
 
     public static int getCurrentHeight() {
         return currentHeight;
     }
-    public int getCurrentPageIndex() {
+    public static int getCurrentPageIndex() {
         return currentPageIndex;
     }
-    public Page getPage(int index) {
+    public static Page getPage(int index) {
         if (index+1 > pages.size()) {
             return null;
         }

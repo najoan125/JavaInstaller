@@ -1,6 +1,5 @@
 package com.hyfata.installer.ui.page;
 
-import com.hyfata.installer.JavaInstaller;
 import com.hyfata.installer.ui.UIController;
 import com.hyfata.installer.utils.InfoUtil;
 
@@ -74,34 +73,32 @@ public abstract class Page {
 
     private void initNaviPanel() {
         JPanel panel = new JPanel();
-        if (JavaInstaller.uiController != null) {
-            int currentIndex = JavaInstaller.uiController.getCurrentPageIndex();
+        int currentIndex = UIController.getCurrentPageIndex();
 
-            //nextPage == InstallPage
-            if (JavaInstaller.uiController.getPage(currentIndex + 1) instanceof InstallPage) {
-                next.setText(InfoUtil.getLangInstall());
-            }
-            //currentPage == InstallPage
-            else if (JavaInstaller.uiController.getPage(currentIndex) instanceof InstallPage) {
-                if (JavaInstaller.uiController.getPage(currentIndex + 1) == null) {
-                    next.setText(InfoUtil.getLangFinish());
-                    cancel.setEnabled(false);
-                } else {
-                    next.setText(InfoUtil.getLangNext());
-                }
-            }
-            //currentPage == FinishPage
-            else if (JavaInstaller.uiController.getPage(currentIndex) instanceof FinishPage) {
+        //nextPage == InstallPage
+        if (UIController.getPage(currentIndex + 1) instanceof InstallPage) {
+            next.setText(InfoUtil.getLangInstall());
+        }
+        //currentPage == InstallPage
+        else if (UIController.getPage(currentIndex) instanceof InstallPage) {
+            if (UIController.getPage(currentIndex + 1) == null) {
                 next.setText(InfoUtil.getLangFinish());
                 cancel.setEnabled(false);
-            } else if (!nextChanged) {
+            } else {
                 next.setText(InfoUtil.getLangNext());
-                next.setEnabled(true);
             }
-            //currentPage != FirstPage
-            if (currentIndex != 0 && JavaInstaller.uiController.getPage(currentIndex + 1) != null) {
-                panel.add(back);
-            }
+        }
+        //currentPage == FinishPage
+        else if (UIController.getPage(currentIndex) instanceof FinishPage) {
+            next.setText(InfoUtil.getLangFinish());
+            cancel.setEnabled(false);
+        } else if (!nextChanged) {
+            next.setText(InfoUtil.getLangNext());
+            next.setEnabled(true);
+        }
+        //currentPage != FirstPage
+        if (currentIndex != 0 && UIController.getPage(currentIndex + 1) != null) {
+            panel.add(back);
         }
         panel.add(next);
         panel.add(Box.createHorizontalStrut(5));
@@ -131,22 +128,22 @@ public abstract class Page {
     }
 
     protected String getNextString() {
-        int currentIndex = JavaInstaller.uiController.getCurrentPageIndex();
+        int currentIndex = UIController.getCurrentPageIndex();
 
         //nextPage == InstallPage
-        if (JavaInstaller.uiController.getPage(currentIndex + 1) instanceof InstallPage) {
+        if (UIController.getPage(currentIndex + 1) instanceof InstallPage) {
             return InfoUtil.getLangInstall();
         }
         //currentPage == InstallPage
-        else if (JavaInstaller.uiController.getPage(currentIndex) instanceof InstallPage) {
-            if (JavaInstaller.uiController.getPage(currentIndex + 1) == null) {
+        else if (UIController.getPage(currentIndex) instanceof InstallPage) {
+            if (UIController.getPage(currentIndex + 1) == null) {
                 return InfoUtil.getLangFinish();
             } else {
                 return InfoUtil.getLangNext();
             }
         }
         //currentPage == FinishPage
-        else if (JavaInstaller.uiController.getPage(currentIndex) instanceof FinishPage) {
+        else if (UIController.getPage(currentIndex) instanceof FinishPage) {
             return InfoUtil.getLangFinish();
         }
         return InfoUtil.getLangNext();
