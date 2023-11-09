@@ -83,7 +83,6 @@ public abstract class Page {
         else if (UIController.getPage(currentIndex) instanceof InstallPage) {
             if (UIController.getPage(currentIndex + 1) == null) {
                 next.setText(InfoUtil.getLangFinish());
-                cancel.setEnabled(false);
             } else {
                 next.setText(InfoUtil.getLangNext());
             }
@@ -107,11 +106,6 @@ public abstract class Page {
     }
 
     //utils
-    protected void setNaviButtonAllEnabled(boolean enabled) {
-        next.setEnabled(enabled);
-        back.setEnabled(enabled);
-        cancel.setEnabled(enabled);
-    }
 
     protected int getRemainingHeight() {
         int height = 0;
@@ -123,8 +117,8 @@ public abstract class Page {
         return UIController.getCurrentHeight() - height;
     }
 
-    protected void setNextChanged(boolean changed) {
-        nextChanged = changed;
+    protected void setNextChanging() {
+        nextChanged = true;
     }
 
     protected String getNextString() {

@@ -58,6 +58,7 @@ public class LicensePage extends Page {
 
         boolean checkbox = InfoUtil.getLicensePage().getBoolean("AgreeCheckbox");
         // change next button
+        setNextChanging();
         if (!checkbox) {
             next.setText(InfoUtil.getLicensePage().getString("AgreeButton"));
         } else if (!read) {
@@ -66,7 +67,6 @@ public class LicensePage extends Page {
         } else {
             next.setText(getNextString());
         }
-        setNextChanged(true);
 
         //scrollPane(License content)
         int height = checkbox ? getRemainingHeight() - 60 : getRemainingHeight() - 30;
@@ -78,12 +78,14 @@ public class LicensePage extends Page {
         registerPanel(result);
 
         //Agree checkbox
-        if (checkbox)
+        if (checkbox) {
+            addHeight(-5);
             registerPanel(checkbox());
+        }
     }
 
     JPanel checkbox() {
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         JCheckBox checkBox = new JCheckBox(InfoUtil.getLicensePage().getString("Agree"));
         if (agree) {
             checkBox.setSelected(true);
@@ -101,7 +103,7 @@ public class LicensePage extends Page {
             }
         });
 
-        panel.setBorder(new EmptyBorder(0, 15, 0, 0));
+        panel.setBorder(new EmptyBorder(0, 0, 0, 15));
         panel.add(checkBox);
         return panel;
     }
