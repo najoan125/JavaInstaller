@@ -21,8 +21,9 @@ public class LicensePage extends Page {
         header();
         addHeight(-5);
         line();
-        addHeight(10);
+        addHeight(15);
         content();
+        addHeight(-5);
         license();
     }
 
