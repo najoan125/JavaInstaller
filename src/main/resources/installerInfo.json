@@ -34,14 +34,14 @@
     "AgreeCheckbox": true
   },
   "DirectoryPage": {
-    "Text": "header",
-    "SubText": "subHeader",
-    "Content": "content",
+    "Text": "Directory",
+    "SubText": "Select directory.",
+    "Content": "Click \"Browse...\" button to select directory!",
     "Browse": "Browse..."
   },
   "InstallPage": {
-    "Text": "Header",
-    "SubText": "subHeader",
+    "Text": "Installing...",
+    "SubText": "Now, installing the application. Please wait...",
     "Installed": "Installed: %s",
     "Removed": "Remove: %s",
     "Downloaded": "Downloaded: %s",

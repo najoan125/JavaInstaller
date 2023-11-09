@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Complete LicensePage.java">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add getNextString()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/LicensePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +136,7 @@
       <workItem from="1699337381480" duration="2949000" />
       <workItem from="1699405665445" duration="10259000" />
       <workItem from="1699487250765" duration="4832000" />
-      <workItem from="1699506666736" duration="957000" />
+      <workItem from="1699506666736" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -292,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699490557286</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add getNextString()">
+      <option name="closed" value="true" />
+      <created>1699507868195</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699507868195</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +335,7 @@
     <MESSAGE value="move up initNaviPanel()" />
     <MESSAGE value="Cleaned" />
     <MESSAGE value="Complete LicensePage.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete LicensePage.java" />
+    <MESSAGE value="Add getNextString()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getNextString()" />
   </component>
 </project>
