@@ -16,6 +16,8 @@ import java.util.Objects;
 public class LicensePage extends Page {
     private static boolean read = false;
     private static boolean agree = false;
+    private final boolean showCheckbox = InfoUtil.getLicensePage().getBoolean("AgreeCheckbox");
+
     @Override
     void initPanels() {
         header();
@@ -51,16 +53,9 @@ public class LicensePage extends Page {
     }
 
     void license() {
-        //license JLabel
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        String content = FileUtil.readFromInputStream(Objects.requireNonNull(
-                ClassLoader.getSystemClassLoader().getResourceAsStream(InfoUtil.getLicensePage().getString("LicenseFile"))));
-        panel.add(new JLabel("<html><body style='width: " + (UIController.WIDTH - 55) + "'>" + content.replace("\n", "<br>") + "</body></html>"));
-
-        boolean checkbox = InfoUtil.getLicensePage().getBoolean("AgreeCheckbox");
         // change next button
         setNextChanging();
-        if (!checkbox) {
+        if (!showCheckbox) {
             next.setText(InfoUtil.getLicensePage().getString("AgreeButton"));
         } else if (!read) {
             next.setText(getNextString());
@@ -69,44 +64,60 @@ public class LicensePage extends Page {
             next.setText(getNextString());
         }
 
-        //scrollPane(License content)
-        int height = checkbox ? getRemainingHeight() - 60 : getRemainingHeight() - 30;
-        JPanel result = ScrollPaneUtil.getScrollPane(panel, new FlowLayout(FlowLayout.CENTER), UIController.WIDTH - 30, height);
-        if (!checkbox && !read) {
-            next.setEnabled(false);
-            Objects.requireNonNull(ScrollPaneUtil.getScrollPaneFromJPanel(result)).getViewport().addChangeListener(this::onScroll);
-        }
-        registerPanel(result);
+        addLicensePane();
 
-        //Agree checkbox
-        if (checkbox) {
+        //Add agree checkbox
+        if (showCheckbox) {
             addHeight(-5);
-            registerPanel(checkbox());
+            addCheckbox();
         }
     }
 
-    JPanel checkbox() {
+    void addLicensePane() {
+        int width = UIController.WIDTH - 30;
+        int height = showCheckbox ? getRemainingHeight() - 60 : getRemainingHeight() - 30;
+
+        JPanel result = ScrollPaneUtil.getScrollPane(getLicenseTextArea(), new FlowLayout(FlowLayout.CENTER), width, height);
+        if (!showCheckbox && !read) {
+            next.setEnabled(false);
+            JScrollPane scrollPane = Objects.requireNonNull(ScrollPaneUtil.getScrollPaneFromJPanel(result));
+            scrollPane.getViewport().addChangeListener(this::onScroll);
+        }
+        registerPanel(result);
+    }
+
+    JTextArea getLicenseTextArea() {
+        String content = FileUtil.readFromInputStream(Objects.requireNonNull(
+                ClassLoader.getSystemClassLoader().getResourceAsStream(InfoUtil.getLicensePage().getString("LicenseFile"))));
+        JTextArea textArea = new JTextArea(content);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setEditable(false);
+        return textArea;
+    }
+
+    void addCheckbox() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         JCheckBox checkBox = new JCheckBox(InfoUtil.getLicensePage().getString("Agree"));
         if (agree) {
             checkBox.setSelected(true);
         }
-
-        checkBox.addItemListener(e -> {
-            if (e.getStateChange() == ItemEvent.SELECTED) {
-                next.setEnabled(true);
-                read = true;
-                agree = true;
-            } else {
-                next.setEnabled(false);
-                read = false;
-                agree = false;
-            }
-        });
-
+        checkBox.addItemListener(this::checkboxListener);
         panel.setBorder(new EmptyBorder(0, 0, 0, 15));
         panel.add(checkBox);
-        return panel;
+        registerPanel(panel);
+    }
+
+    void checkboxListener(ItemEvent e) {
+        if (e.getStateChange() == ItemEvent.SELECTED) {
+            next.setEnabled(true);
+            read = true;
+            agree = true;
+        } else {
+            next.setEnabled(false);
+            read = false;
+            agree = false;
+        }
     }
 
     void onScroll(ChangeEvent e) {
@@ -118,6 +129,9 @@ public class LicensePage extends Page {
         if (verticalPosition + extentHeight >= viewHeight) {
             read = true;
             next.setEnabled(true);
+        } else {
+            read = false;
+            next.setEnabled(false);
         }
     }
 }

@@ -14,7 +14,7 @@ public class DirectoryPage extends Page {
         header();
         addHeight(-5);
         line();
-        addHeight(20);
+        content();
     }
 
     void header() {
@@ -31,6 +31,13 @@ public class DirectoryPage extends Page {
         HorizontalLine horizontalLine = new HorizontalLine();
         horizontalLine.setPreferredSize(new Dimension(UIController.WIDTH, 2));
         panel.add(horizontalLine);
+        registerPanel(panel);
+    }
+
+    void content() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JLabel label = new JLabel("<html><body style='width: " + (UIController.WIDTH - 30) + "'>" + InfoUtil.getDirectoryPage().getString("Content") + "</body></html>");
+        panel.add(label);
         registerPanel(panel);
     }
 }

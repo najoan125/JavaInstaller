@@ -6,7 +6,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class ScrollPaneUtil {
-    public static JPanel getScrollPane(JPanel panel) {
+    public static JPanel getScrollPane(Container panel) {
         JScrollPane jScrollPane = new JScrollPane(panel);
         Border border = new LineBorder(Color.decode("#4e5467"), 2);
         jScrollPane.setBorder(border);
@@ -15,7 +15,7 @@ public class ScrollPaneUtil {
         result.add(jScrollPane);
         return result;
     }
-    public static JPanel getScrollPane(JPanel panel, int width, int height) {
+    public static JPanel getScrollPane(Container panel, int width, int height) {
         JScrollPane jScrollPane = new JScrollPane(panel);
         jScrollPane.setPreferredSize(new Dimension(width, height));
         Border border = new LineBorder(Color.decode("#4e5467"), 2);
@@ -26,7 +26,7 @@ public class ScrollPaneUtil {
         return result;
     }
 
-    public static JPanel getScrollPane(JPanel panel, LayoutManager layout) {
+    public static JPanel getScrollPane(Container panel, LayoutManager layout) {
         JScrollPane jScrollPane = new JScrollPane(panel);
         Border border = new LineBorder(Color.decode("#4e5467"), 2);
         jScrollPane.setBorder(border);
@@ -35,7 +35,7 @@ public class ScrollPaneUtil {
         result.add(jScrollPane);
         return result;
     }
-    public static JPanel getScrollPane(JPanel panel, LayoutManager layout, int width, int height) {
+    public static JPanel getScrollPane(Container panel, LayoutManager layout, int width, int height) {
         JScrollPane jScrollPane = new JScrollPane(panel);
         jScrollPane.setPreferredSize(new Dimension(width, height));
         Border border = new LineBorder(Color.decode("#4e5467"), 2);

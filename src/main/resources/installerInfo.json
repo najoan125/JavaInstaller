@@ -36,7 +36,7 @@
   "DirectoryPage": {
     "Text": "Directory",
     "SubText": "Select directory.",
-    "Content": "Click \"Browse...\" button to select directory!",
+    "Content": "It will be installed in the folder below. If you want to install in a different folder, click the 'Browse' button and select a different folder. To begin installation, click the 'Install' button.",
     "Browse": "Browse..."
   },
   "InstallPage": {

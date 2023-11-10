@@ -7,6 +7,8 @@ import com.hyfata.installer.utils.DialogUtil;
 import com.sun.jna.Platform;
 
 public class JavaInstaller {
+    public static String installPath;
+
     public static void main(String[] args) {
         IntelliJTheme.setup(ClassLoader.getSystemClassLoader().getResourceAsStream("theme/arc_theme_dark.theme.json"));
         InfoUtil.loadInfo();
@@ -15,16 +17,14 @@ public class JavaInstaller {
     }
 
     private static void platformCheck() {
-        if (Platform.isWindows() && !InfoUtil.isWindowsSupported()) {
-            DialogUtil.showErrorDialog(InfoUtil.getLangOSNotSupport(),"OS Not Support Error");
-            System.exit(-1);
-        }
-        else if (Platform.isMac() && !InfoUtil.isMacSupported()) {
-            DialogUtil.showErrorDialog(InfoUtil.getLangOSNotSupport(),"OS Not Support Error");
-            System.exit(-1);
-        }
-        else if (Platform.isLinux() && !InfoUtil.isLinuxSupported()) {
-            DialogUtil.showErrorDialog(InfoUtil.getLangOSNotSupport(),"OS Not Support Error");
+        if (Platform.isWindows() && InfoUtil.isWindowsSupported()) {
+            installPath = InfoUtil.getInstallDirWindows();
+        } else if (Platform.isMac() && InfoUtil.isMacSupported()) {
+            installPath = InfoUtil.getInstallDirMac();
+        } else if (Platform.isLinux() && InfoUtil.isLinuxSupported()) {
+            installPath = InfoUtil.getInstallDirLinux();
+        } else {
+            DialogUtil.showErrorDialog(InfoUtil.getLangOSNotSupport(), "OS Not Support Error");
             System.exit(-1);
         }
     }
