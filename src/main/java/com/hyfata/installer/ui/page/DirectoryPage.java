@@ -36,7 +36,7 @@ public class DirectoryPage extends Page {
 
     void content() {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JLabel label = new JLabel("<html><body style='width: " + (UIController.WIDTH - 30) + "'>" + InfoUtil.getDirectoryPage().getString("Content") + "</body></html>");
+        JLabel label = new JLabel("<html><body style='width: " + (UIController.WIDTH - 50) + "'>" + InfoUtil.getDirectoryPage().getString("Content") + "</body></html>");
         panel.add(label);
         registerPanel(panel);
     }
