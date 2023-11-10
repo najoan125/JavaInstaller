@@ -20,6 +20,8 @@ public class LicensePage extends Page {
 
     @Override
     void initPanels() {
+        changeNextButton();
+
         header();
         addHeight(-5);
         line();
@@ -27,6 +29,18 @@ public class LicensePage extends Page {
         content();
         addHeight(-5);
         license();
+    }
+
+    void changeNextButton() {
+        setNextChanging();
+        if (!showCheckbox) {
+            next.setText(InfoUtil.getLicensePage().getString("AgreeButton"));
+        } else if (!read) {
+            next.setText(getNextString());
+            next.setEnabled(false);
+        } else {
+            next.setText(getNextString());
+        }
     }
 
     void header() {
@@ -53,17 +67,6 @@ public class LicensePage extends Page {
     }
 
     void license() {
-        // change next button
-        setNextChanging();
-        if (!showCheckbox) {
-            next.setText(InfoUtil.getLicensePage().getString("AgreeButton"));
-        } else if (!read) {
-            next.setText(getNextString());
-            next.setEnabled(false);
-        } else {
-            next.setText(getNextString());
-        }
-
         addLicensePane();
 
         //Add agree checkbox
