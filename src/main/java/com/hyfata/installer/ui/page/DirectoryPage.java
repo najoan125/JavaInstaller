@@ -1,5 +1,6 @@
 package com.hyfata.installer.ui.page;
 
+import com.hyfata.installer.JavaInstaller;
 import com.hyfata.installer.ui.UIController;
 import com.hyfata.installer.utils.HorizontalLine;
 import com.hyfata.installer.utils.InfoUtil;
@@ -15,6 +16,8 @@ public class DirectoryPage extends Page {
         addHeight(-5);
         line();
         content();
+        addHeight(20);
+        directory();
     }
 
     void header() {
@@ -38,6 +41,21 @@ public class DirectoryPage extends Page {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JLabel label = new JLabel("<html><body style='width: " + (UIController.WIDTH - 50) + "'>" + InfoUtil.getDirectoryPage().getString("Content") + "</body></html>");
         panel.add(label);
+        registerPanel(panel);
+    }
+
+    void directory() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+
+        JTextField jTextField = new JTextField();
+        jTextField.setText(JavaInstaller.installPath);
+        jTextField.setPreferredSize(new Dimension(400, jTextField.getPreferredSize().height));
+        panel.add(jTextField);
+
+        JButton jButton = new JButton();
+        jButton.setText(InfoUtil.getDirectoryPage().getString("Browse"));
+        panel.add(jButton);
+
         registerPanel(panel);
     }
 }
