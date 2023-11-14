@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="something changes">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="complete DirectoryPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/DirectoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/DirectoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,8 @@
       <workItem from="1699487250765" duration="4832000" />
       <workItem from="1699506666736" duration="4275000" />
       <workItem from="1699573440904" duration="8951000" />
-      <workItem from="1699933352572" duration="551000" />
+      <workItem from="1699933352572" duration="912000" />
+      <workItem from="1699941870520" duration="4430000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -356,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699582205078</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="complete DirectoryPage UI">
+      <option name="closed" value="true" />
+      <created>1699934069432</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699934069432</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,8 +384,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Page Classes" />
-    <MESSAGE value="Add setLayout() in Page.java" />
     <MESSAGE value="implement WelcomePage" />
     <MESSAGE value="Add branding text" />
     <MESSAGE value="Clean" />
@@ -399,6 +407,8 @@
     <MESSAGE value="Clean code and something changes." />
     <MESSAGE value="Clean code" />
     <MESSAGE value="something changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="something changes" />
+    <MESSAGE value="complete DirectoryPage UI" />
+    <MESSAGE value="complete DirectoryPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete DirectoryPage" />
   </component>
 </project>
