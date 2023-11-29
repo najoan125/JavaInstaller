@@ -2,7 +2,6 @@ package com.hyfata.installer.ui.page;
 
 import com.hyfata.file.utils.FileUtil;
 import com.hyfata.installer.ui.UIController;
-import com.hyfata.installer.utils.HorizontalLine;
 import com.hyfata.installer.utils.InfoUtil;
 import com.hyfata.installer.utils.ScrollPaneUtil;
 
@@ -22,9 +21,9 @@ public class LicensePage extends Page {
     void initPanels() {
         changeNextButton();
 
-        header();
+        super.header(InfoUtil.getLicensePage().getString("Text"), InfoUtil.getLicensePage().getString("SubText"));
         addHeight(-5);
-        line();
+        super.horizontalLine();
         addHeight(15);
         content();
         addHeight(-5);
@@ -41,23 +40,6 @@ public class LicensePage extends Page {
         } else {
             next.setText(getNextString());
         }
-    }
-
-    void header() {
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        panel.add(new JLabel("<html><b>" + InfoUtil.parse(InfoUtil.getLicensePage().getString("Text")) + "</b>" +
-                "<p>" + InfoUtil.parse(InfoUtil.getLicensePage().getString("SubText")) + "</p>" +
-                "</html>"));
-        panel.setBorder(new EmptyBorder(0, 10, 0, 0));
-        registerPanel(panel);
-    }
-
-    void line() {
-        JPanel panel = new JPanel();
-        HorizontalLine horizontalLine = new HorizontalLine();
-        horizontalLine.setPreferredSize(new Dimension(UIController.WIDTH, 2));
-        panel.add(horizontalLine);
-        registerPanel(panel);
     }
 
     void content() {
