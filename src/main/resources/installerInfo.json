@@ -43,6 +43,7 @@
   "InstallPage": {
     "Text": "Installing...",
     "SubText": "Now, installing the application. Please wait...",
+    "Loading": "Loading...",
     "Installed": "Installed: %s",
     "Removed": "Remove: %s",
     "Downloaded": "Downloaded: %s",

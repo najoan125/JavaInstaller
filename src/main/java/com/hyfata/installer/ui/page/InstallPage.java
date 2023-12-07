@@ -6,22 +6,29 @@ import com.hyfata.installer.utils.InfoUtil;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 public class InstallPage extends Page {
-    private static final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
     private static JProgressBar progress;
     private static JLabel progressText;
+    private static JLabel text;
     @Override
     void initPanels() {
         super.header(InfoUtil.getInstallPage().getString("Text"), InfoUtil.getInstallPage().getString("SubText"));
         addHeight(-5);
         super.horizontalLine();
+        content();
+        addHeight(-5);
         progressBar();
         super.setNextChanging();
         next.setEnabled(false);
         back.setEnabled(false);
+    }
+
+    void content() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        text = new JLabel(InfoUtil.getInstallPage().getString("Loading"));
+        panel.add(text);
+        registerPanel(panel);
     }
 
     void progressBar() {
@@ -35,10 +42,13 @@ public class InstallPage extends Page {
 
     public static void changeProgress() {
         if (Installer.getProgress() >= 100) {
-            executorService.shutdown();
             next.setEnabled(true);
         }
         progressText.setText(Installer.getProgress() + "%");
         progress.setValue(Installer.getProgress());
+    }
+
+    public static void setContentText(String contentText) {
+        text.setText(contentText);
     }
 }

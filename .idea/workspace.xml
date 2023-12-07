@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add InstallManagers">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add more methods and bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/Installer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/Installer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/manager/InstallManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/manager/InstallManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/installerInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/installerInfo.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +148,7 @@
       <workItem from="1701219858661" duration="1834000" />
       <workItem from="1701821982913" duration="7551000" />
       <workItem from="1701839370110" duration="3117000" />
-      <workItem from="1701926150273" duration="1678000" />
+      <workItem from="1701926150273" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -400,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701829523267</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add more methods and bug fix">
+      <option name="closed" value="true" />
+      <created>1701927961659</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701927961659</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +424,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean" />
     <MESSAGE value="Implement next, back, cancel / and now support $[] other json value" />
     <MESSAGE value="Change installerInfo.json" />
     <MESSAGE value="Clean code, little implement LicensePage.java" />
@@ -443,6 +448,7 @@
     <MESSAGE value="complete DirectoryPage" />
     <MESSAGE value="Clean code, implementing InstallPage.java" />
     <MESSAGE value="Add InstallManagers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add InstallManagers" />
+    <MESSAGE value="Add more methods and bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more methods and bug fix" />
   </component>
 </project>
