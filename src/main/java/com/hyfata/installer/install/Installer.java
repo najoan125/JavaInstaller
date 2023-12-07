@@ -24,6 +24,15 @@ public class Installer {
         items.add(installManager);
     }
 
+    public static ArrayList<InstallManager> getItems() {
+        return items;
+    }
+
+    public static void setItemFinished() {
+        currentIndex++;
+    }
+
+    // path
     public static String getCurrentPath() {
         return paths.get(currentIndex);
     }
@@ -32,11 +41,4 @@ public class Installer {
         Installer.path = path;
     }
 
-    public static ArrayList<InstallManager> getItems() {
-        return items;
-    }
-
-    public static void setItemFinished() {
-        currentIndex++;
-    }
 }
