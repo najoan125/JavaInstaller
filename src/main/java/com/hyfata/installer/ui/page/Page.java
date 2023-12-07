@@ -106,8 +106,7 @@ public abstract class Page {
         this.naviButtons = panel;
     }
 
-    //utils
-
+    // utils
     protected int getRemainingHeight() {
         int height = 0;
         for (JPanel p : panels) {
