@@ -9,5 +9,6 @@ public abstract class InstallManager {
         installing();
         Installer.setItemFinished();
         InstallPage.changeProgress();
+        InstallPage.setSubProgressVisible(false);
     }
 }

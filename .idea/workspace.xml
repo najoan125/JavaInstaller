@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Add content text in Install Page">
+    <list default="true" id="7e51d138-1d3f-4f56-af78-00d00a5e970e" name="변경" comment="Cleaned code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/Installer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/Installer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/manager/InstallManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/install/manager/InstallManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hyfata/installer/ui/page/InstallPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +55,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/najoan/intellij-projects/JavaInstaller/src/main/resources/theme&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/najoan/intellij-projects/JavaInstaller/src/main/resources/theme",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.JavaInstaller.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/theme" />
@@ -121,6 +125,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-f644763e9732-5759c461" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -147,7 +158,8 @@
       <workItem from="1701219858661" duration="1834000" />
       <workItem from="1701821982913" duration="7551000" />
       <workItem from="1701839370110" duration="3117000" />
-      <workItem from="1701926150273" duration="3332000" />
+      <workItem from="1701926150273" duration="3666000" />
+      <workItem from="1703739200144" duration="3108000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -413,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701929351332</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Cleaned code">
+      <option name="closed" value="true" />
+      <created>1701929525001</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701929525001</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change installerInfo.json" />
     <MESSAGE value="Clean code, little implement LicensePage.java" />
     <MESSAGE value="Change some variable names" />
     <MESSAGE value="Change window size and some ui." />
@@ -456,6 +475,7 @@
     <MESSAGE value="Add InstallManagers" />
     <MESSAGE value="Add more methods and bug fix" />
     <MESSAGE value="Add content text in Install Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add content text in Install Page" />
+    <MESSAGE value="Cleaned code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned code" />
   </component>
 </project>

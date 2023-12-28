@@ -37,6 +37,7 @@ public class Installer {
         return paths.get(currentIndex);
     }
 
+    //must run before addItem()
     public static void setPath(String path) {
         Installer.path = path;
     }
